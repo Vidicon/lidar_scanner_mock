@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+<!-- Launch actuator related nodes -->
+    <node pkg="lidar_transform" type="lidar_mock" name="lidar_mock" output="screen"/>
+	<node pkg="lidar_transform" type="servo_mock" name="servo_mock" output="screen"/>
+	<node pkg="lidar_transform" type="lidar_transform_node" name="lidar_transform_node" output="screen"/>
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find lidar_transform)/config/view.rviz" />
+	<node pkg="rqt_graph" type="rqt_graph" name="rqt_graph"/>
+</launch>
+
